@@ -1,0 +1,13 @@
+.wrapper{
+    display: inline-flex;
+}
+#first{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+#second{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}

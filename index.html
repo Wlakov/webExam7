@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+<div id="first">
+    <p style="text-align: center">Зелений</p>
+</div>
+<div id="second">
+    <p style="text-align: center">Червоний</p>
+</div>
+</div>
+<button id="but">Start</button>
+<script>
+   let but=document.getElementById('but')
+   let f=document.getElementById('first')
+   let s=document.getElementById('second')
+   but.addEventListener('click',setRed())
+
+   function setRed(){
+       f.style.backgroundColor='red';
+       s.style.backgroundColor='green'
+       but.removeEventListener('click',setRed)
+       but.addEventListener('click',setGreen)
+   }
+   function setGreen() {
+       f.style.backgroundColor='green';
+       s.style.backgroundColor='red'
+       but.removeEventListener('click',setGreen)
+       but.addEventListener('click',setRed)
+   }
+
+</script>
+</body>
+</html>
